@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<protocol srv_name="game_srv" cli_name="cli" buf_size="900">
+  <func name="Move" flow="c2s">
+    <arg type="float" name="x" />
+    <arg type="float" name="y" />
+  </func>
+  <func name="GetObjData" flow="c2s">
+    <arg type="int" name="obj_id" />
+  </func>
+  <func name="SendCharacterData" flow="s2c">
+    <arg type="int" name="obj_id" />
+    <arg type="string" name="name" />
+    <arg type="short" name="max_hp" />
+    <arg type="short" name="hp" />
+    <arg type="float" name="ms" />
+  </func>
+  <func name="StartNotifyPos" flow="s2c">
+  </func>
+  <func name="NotifyPos" flow="s2c">
+    <arg type="int" name="obj_id" />
+    <arg type="short" name="obj_type" />
+    <arg type="float" name="x" />
+    <arg type="float" name="y" />
+  </func>
+  <func name="EndNotifyPos" flow="s2c">
+  </func>
+  <func name="GetPing" flow="c2s">
+    <arg type="int" name="time" />
+  </func>
+  <func name="SendPing" flow="s2c">
+    <arg type="int" name="time" />
+  </func>
+</protocol>
