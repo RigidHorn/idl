@@ -167,7 +167,7 @@ namespace compiler
         // flow識別.
         if (func.flow != flow) continue;
 
-        writer_.Write("static void set_" + func.name + "(void (*p)(");
+        writer_.Write("static void " + func.name + "(void (*p)(");
         WriteArg(func);
         writer_.WriteLine(")){" + func.name + "_=p;}");
       }
