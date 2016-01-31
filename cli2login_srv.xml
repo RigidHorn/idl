@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<protocol srv_name="login_srv" cli_name="cli" buf_size="900">
+  <func name="Result" flow="s2c">
+    <arg type="string" name="ip" />
+    <arg type="ushort" name="port" />
+  </func>
+  <func name="Login" flow="c2s">
+    <arg type="string" name="account_name" />
+    <arg type="string" name="password" />
+  </func>
+  <func name="SignUp" flow="c2s">
+    <arg type="string" name="account_name" />
+    <arg type="string" name="password" />
+  </func>
+</protocol>

@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<protocol srv_name="login_srv" cli_name="lobby_srv" buf_size="900">
+  <func name="Login" flow="s2c">
+    <arg type="string" name="account_name" />
+    <arg type="string" name="code" />
+  </func>
+</protocol>
